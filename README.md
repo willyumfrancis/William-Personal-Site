@@ -1,5 +1,12 @@
-# README
+# BURGER SITE READ ME
 
+Hello my name is William Francis. 
+
+Welcome to the Burger Site built with Ruby on Rails.
+
+Follow me @wfteddybear
+
+---
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
