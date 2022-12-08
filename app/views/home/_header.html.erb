@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3287a8;">
+
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button >
+  <button>
+<%= image_tag "profile_pic.jpg", class: "logo, mw-10, mh-10" %>
+
+<%= link_to "Will's World", root_path, class: "navbar-brand" %>
+    </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+
+      <li class="nav-item">
+        <%= link_to "About Us", home_about_path, class:"nav-link" %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to "Friends", friends_path, class:"nav-link" %>
+      </li>
+
+
+      <% if user_signed_in? %>
+
+         <li class="nav-item">
+          <%= link_to "Add Friend", new_friend_path, class:"nav-link" %>
+        </li>
+      
+        <li class="nav-item">
+
+        <%= button_to(
+        "Log Out",
+        destroy_user_session_path,
+        method: :delete
+      ) %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "Edit Profile", edit_user_registration_path, class:"nav-link" %>
+        </li>
+
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Sign Up", new_user_registration_path, class:"nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "Sign In", new_user_session_path, class:"nav-link" %>
+        </li>
+      <% end %>
+
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<!-- 
+<li class="nav-item">
+        <%= link_to "Friends", friends_path, class:"nav-link" %>
+      </li> -->
+
+      
