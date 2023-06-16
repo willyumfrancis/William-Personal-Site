@@ -1,35 +1,34 @@
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #28282B;">
-
-
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button >
+  </button>
   <button>
-<%= image_tag "profile_pic.jpg", class: "logo, mw-10, mh-10" %>
-
-<%= link_to "Will's World", root_path, class: "navbar-brand" %>
-    </button>
-
+    <%= image_tag "profile_pic.jpg", class: "logo, mw-10, mh-10" %>
+    <%= link_to "Alex Tanchyn", root_path, class: "navbar-brand", style: "color: black;" %>
+  </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav">
       <li class="nav-item active">
-
-      <li class="nav-item">
-        <%= link_to "About Us", home_about_path, class:"nav-link" %>
-      </li>
-
-      <li class="nav-item">
-        <%= link_to "Portfolio", portfolio_path, class:"nav-link" %>
-      </li>
-
-         <li class="nav-item">
-         <%= link_to "Social", social_path, class:"nav-link" %>        </li>
         <li class="nav-item">
-
-
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+          <%= link_to "About Us", home_about_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Portfolio", portfolio_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Social", social_path, class:"nav-link" %>
+        </li>
+      </li>
+      <li class="nav-item">
+      <%= link_to "Contact", contact_path, class:"nav-link" %>
+    </li>
+  </li>
+    </ul>
+    <div class="ml-auto">
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
   </div>
 </nav>

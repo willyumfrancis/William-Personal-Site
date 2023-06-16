@@ -1,2 +1,36 @@
-<h1>Portfolio</h1>
-<p>Welcome to my portfolio!</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <style>
+    /* Styles for the page */
+    /* ... */
+
+    .artwork-container {
+      /* ... */
+    }
+
+    .artwork {
+      /* ... */
+    }
+  </style>
+</head>
+<body>
+  <h1>Portfolio</h1>
+  <p>Welcome to my portfolio~ 👨‍🏫 </p>
+  
+  <div class="artwork-container">
+  <% artwork_images = Dir.glob(Rails.root.join('app', 'assets', 'images', 'portfolio-images', '*.{jpg,jpeg,png,gif}').to_s) %>
+  <% artwork_images.each do |image_path| %>
+    <div class="artwork">
+      <%= image_tag "/portfolio-images/#{image_path.split('/').last}", alt: 'Artwork' %>
+    </div>
+  <% end %>
+  
+  </div>
+  
+  <script>
+    // JavaScript code can be added here for additional functionality
+  </script>
+</body>
+</html>
