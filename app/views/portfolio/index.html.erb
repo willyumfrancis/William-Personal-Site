@@ -4,14 +4,56 @@
   <title>Portfolio</title>
   <style>
     /* Styles for the page */
-    /* ... */
+
+
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+    }
 
     .artwork-container {
-      /* ... */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
 
     .artwork {
-      /* ... */
+      max-width: 400px;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: slideInFromLeft 2s ease-out forwards;
+    }
+
+    .artwork:nth-child(even) {
+      animation-name: slideInFromRight;
+    }
+
+    .artwork img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @keyframes slideInFromLeft {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInFromRight {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -20,13 +62,12 @@
   <p>Welcome to my portfolio~ 👨‍🏫 </p>
   
   <div class="artwork-container">
-  <% artwork_images = Dir.glob(Rails.root.join('app', 'assets', 'images', 'portfolio-images', '*.{jpg,jpeg,png,gif}').to_s) %>
-  <% artwork_images.each do |image_path| %>
-    <div class="artwork">
-      <%= image_tag "/portfolio-images/#{image_path.split('/').last}", alt: 'Artwork' %>
-    </div>
-  <% end %>
-  
+    <% artwork_images = Dir.glob(Rails.root.join('app', 'assets', 'images', 'portfolio-images', '*.{jpg,jpeg,png,gif}').to_s) %>
+    <% artwork_images.each do |image_path| %>
+      <div class="artwork">
+        <%= image_tag asset_path("portfolio-images/#{image_path.split('/').last}"), alt: 'Artwork' %>
+      </div>
+    <% end %>
   </div>
   
   <script>
