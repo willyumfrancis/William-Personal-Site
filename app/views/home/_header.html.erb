@@ -16,6 +16,7 @@
 }
 
 
+
     .navbar-brand {
       color: #fff;
     }
@@ -31,6 +32,8 @@
 </head>
 
 <body>
+  <!-- Add sticky-top class here -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
   <!-- Add sticky-top class here -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,11 +57,13 @@
         </li>
       </ul>
       <div class="ml-auto">
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
+  <%= form_tag search_google_path, method: :get, class: 'form-inline my-2 my-lg-0' do %>
+    <%= text_field_tag :query, params[:query], placeholder: 'Search', class: 'form-control mr-sm-2', 'aria-label': 'Search' %>
+    <%= submit_tag 'Search', class: 'btn btn-outline-light my-2 my-sm-0', name: nil %>
+  <% end %>
+</div>
+
+    
     </div>
   </nav>
 
