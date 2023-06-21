@@ -2,8 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   get 'home/about'
-  # root 'home#index'
-  root 'friends#index'
+   root 'home#index'
   get "home/friends"
   resources :friends
   get 'portfolio', to: 'portfolio#index', as: 'portfolio'
