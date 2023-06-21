@@ -1,5 +1,13 @@
 <head>
   <style>
+
+  .slide-in {
+    top: 0;
+  }
+
+  .slide-out {
+    top: -100%;
+  }
   
     .navbar {
       background-color: #28282B;
@@ -51,4 +59,37 @@
       </div>
     </div>
   </nav>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      const header = document.querySelector("nav.navbar.sticky-top");
+
+      let previousScroll = window.pageYOffset;
+
+      window.addEventListener("wheel", (event) => {
+        const deltaY = event.deltaY;
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll === 0) {
+          // At top of page, slide in header
+          header.classList.remove("slide-out");
+          header.classList.add("slide-in");
+        } else if (deltaY < -10) {
+          // Scrolling up is negative deltaY
+          header.classList.remove("slide-out");
+          header.classList.add("slide-in");
+        } else if (deltaY > 10) {
+          // Scrolling down is positive deltaY
+          header.classList.remove("slide-in");
+          header.classList.add("slide-out");
+        }
+
+        previousScroll = currentScroll;
+      });
+    }
+  });
+</script>
+
+
 </body>
