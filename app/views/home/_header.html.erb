@@ -1,10 +1,20 @@
 <head>
   <style>
+
+  .slide-in {
+    top: 0;
+  }
+
+  .slide-out {
+    top: -100%;
+  }
   
-    .navbar {
-      background-color: #28282B;
-      color: #fff;
-    }
+  .navbar {
+  background-color: #28282B;
+  color: #fff;
+  transition: top 1s ease-in-out;
+}
+
 
     .navbar-brand {
       color: #fff;
@@ -21,13 +31,14 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <!-- Add sticky-top class here -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <button>
-      <%= image_tag "profile_pic.jpg", class: "logo mw-10 mh-10"%>
-      <%= link_to "William Francis Misiaszek", root_path, class: "navbar-brand", style: "color: black;" %>
+    <%= image_tag "profile_pic.jpg", class: "logo", width: "100", height: "100" %>
+    <%= link_to "William Francis Misiaszek", root_path, class: "navbar-brand", style: "color: black;" %>
       </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
@@ -50,4 +61,37 @@
       </div>
     </div>
   </nav>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      const header = document.querySelector("nav.navbar.sticky-top");
+
+      let previousScroll = window.pageYOffset;
+
+      window.addEventListener("wheel", (event) => {
+        const deltaY = event.deltaY;
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll === 0) {
+          // At top of page, slide in header
+          header.classList.remove("slide-out");
+          header.classList.add("slide-in");
+        } else if (deltaY < -10) {
+          // Scrolling up is negative deltaY
+          header.classList.remove("slide-out");
+          header.classList.add("slide-in");
+        } else if (deltaY > 10) {
+          // Scrolling down is positive deltaY
+          header.classList.remove("slide-in");
+          header.classList.add("slide-out");
+        }
+
+        previousScroll = currentScroll;
+      });
+    }
+  });
+</script>
+
+
 </body>
