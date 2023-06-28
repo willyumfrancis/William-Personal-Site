@@ -17,7 +17,3 @@ Rails.application.routes.draw do
   # root "articles#index"
 end
 
-constraints(host: 'will-site-dc0779429fbc.herokuapp.com') do
-  match '_any_path', to: redirect(subdomain: 'www', domain: 'willfrancisco.com'), via: :all, _any_path: '(/.*)'
-end
-
