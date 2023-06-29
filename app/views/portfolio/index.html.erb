@@ -1,77 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Portfolio</title>
-  <style>
-    /* Styles for the page */
-
-
-
-    h1 {
-      text-align: center;
-      padding: 20px;
-    }
-
-    .artwork-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-
-    .artwork {
-      max-width: 400px;
-      margin-bottom: 20px;
-      opacity: 0;
-      animation: slideInFromLeft 2s ease-out forwards;
-    }
-
-    .artwork:nth-child(even) {
-      animation-name: slideInFromRight;
-    }
-
-    .artwork img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    @keyframes slideInFromLeft {
-      0% {
-        transform: translateX(-100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes slideInFromRight {
-      0% {
-        transform: translateX(100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-  </style>
+    <title>Welcome to Namie Beta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .updates {
+            margin-top: 20px;
+        }
+        .updates h3 {
+            color: #0066cc;
+        }
+        .updates ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .intro {
+            margin-top: 20px;
+        }
+        .sign-off {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-  <h1>Portfolio</h1>
-  <p>Welcome to my portfolio~ 👨‍🏫 </p>
-  
-  <div class="artwork-container">
-    <% artwork_images = Dir.glob(Rails.root.join('app', 'assets', 'images', 'portfolio-images', '*.{jpg,jpeg,png,gif}').to_s) %>
-    <% artwork_images.each do |image_path| %>
-      <div class="artwork">
-        <%= image_tag asset_path("portfolio-images/#{image_path.split('/').last}"), alt: 'Artwork' %>
-      </div>
-    <% end %>
-  </div>
-  
-  <script>
-    // JavaScript code can be added here for additional functionality
-  </script>
+    <h1>Welcome to the Namie Beta</h1>
+
+    <div class="updates">
+        <h3>UPDATES:</h3>
+        <ul>
+            <li>Notifications working.</li>
+            <li>New default picture for locations.</li>
+        </ul>
+    </div>
+
+    <div class="intro">
+        <p>This app will help you remember the people you frequently bump into. Jot a name down, add a descriptor, and a picture if you love the location.</p>
+
+        <img src="app/assets/images/StoryBoard.png" alt="Storyboard Image">
+
+        <p>Namie will ping you the last note you wrote down at a location as you get close to it (for those nonchalant glances at your phone before engaging in conversation).</p>
+
+        <img src="app/assets/images/App1.png" alt="App1 Image">
+
+        <p>I designed the app to be easy to use. Text me (w/ a screenshot) if you find a weird bug!</p>
+
+        <img src="app/assets/images/App2.png" alt="App2 Image">
+
+        <p>Go out and meet people! Meet the owner and star employees of your favorite spots. People react differently when you remember the little things.</p>
+    </div>
+
+    <div class="sign-off">
+        <p>All the best,</p>
+        <p>William</p>
+    </div>
 </body>
 </html>
