@@ -1,35 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome to Namie Beta</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .updates {
-            margin-top: 20px;
-        }
-        .updates h3 {
-            color: #0066cc;
-        }
-        .updates ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-        .intro {
-            margin-top: 20px;
-        }
-        .sign-off {
-            margin-top: 20px;
-        }
+    
         img {
             max-width: 100%;
             height: auto;
         }
+        .app-images {
+            display: flex;
+            justify-content;
+        }
+        .app-images a img {
+            max-width: 200px;
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to the Namie Beta</h1>
+    <h1>Namie - iOS Application</h1>
+
+    <br>
 
     <div class="updates">
         <h3>UPDATES:</h3>
@@ -42,15 +32,9 @@
     <div class="intro">
         <p>This app will help you remember the people you frequently bump into. Jot a name down, add a descriptor, and a picture if you love the location.</p>
 
-        <img src="app/assets/images/StoryBoard.png" alt="Storyboard Image">
-
         <p>Namie will ping you the last note you wrote down at a location as you get close to it (for those nonchalant glances at your phone before engaging in conversation).</p>
-
-        <img src="app/assets/images/App1.png" alt="App1 Image">
-
+   
         <p>I designed the app to be easy to use. Text me (w/ a screenshot) if you find a weird bug!</p>
-
-        <img src="app/assets/images/App2.png" alt="App2 Image">
 
         <p>Go out and meet people! Meet the owner and star employees of your favorite spots. People react differently when you remember the little things.</p>
     </div>
@@ -59,5 +43,18 @@
         <p>All the best,</p>
         <p>William</p>
     </div>
+
+    <div class="app-images">
+        <a href="<%= asset_path 'App1.png' %>">
+            <%= image_tag "App1.png", alt: "App1 Image" %>
+        </a>
+        <a href="<%= asset_path 'App2.png' %>">
+            <%= image_tag "App2.png", alt: "App2 Image" %>
+        </a>
+    </div>
+
+    <a href="<%= asset_path 'StoryBoard.png' %>">
+        <%= image_tag "StoryBoard.png", alt: "Storyboard Image", width: "500" %>
+    </a>
 </body>
 </html>
