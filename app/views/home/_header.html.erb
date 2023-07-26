@@ -1,51 +1,38 @@
 <head>
   <style>
 
-  .logo-container {
-    background-color: #F8F8F8;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    padding: 5px; /* Adjusted from 10px to 5px */
-    display: flex;
-    align-items: center;
-}
-
-.logo-container .logo {
-    width: 75px; /* Adjusted from 100px to 75px */
-    height: 75px; /* Adjusted from 100px to 75px */
-}
-
-.navbar {
-  background-color: #28282B;
-  color: #fff;
-  transition: top 1s ease-in-out;
-  padding: 0.5rem 1rem; /* Adjusted padding */
-}
-
 @media (max-width: 768px) {
     .logo-container .logo {
         width: 25px; /* Adjusted from 35px to 25px */
         height: 25px; /* Adjusted from 35px to 25px */
     }
 
-    .navbar-collapse {
-        padding: 0 15px;
-    }
 }
+
 
   </style>
 </head>
 
-
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #000000;">
-  <div class="logo-container">
-    <div style="margin-right: 10px; cursor: pointer;" onclick="location.href='<%= root_path %>'">
-      <%= image_tag "profile_pic.jpg", class: "logo" %>
-    </div>
-    <%= link_to "William Francis", root_path, class: "navbar-brand", style: "color: black;" %>
-  </div>
+<div class="logo-container">
+<div class="avatar" style="cursor: pointer;" onclick="location.href='<%= root_path %>'">
+    <%= image_tag "profilepic.jpg", class: "logo", width: '35', height: '35' %>
+</div>
+<div class="name-and-icons">
+    <%= link_to "William Francis", root_path, class: "navbar-brand spacing-nav", style: "color: black; align-self: center;" %>
+    <div class="social-media-icons">
+        <%= link_to '<i class="fab fa-tiktok"></i>'.html_safe, "https://www.tiktok.com/@beszos?lang=en", class: "nav-link" %>
+        <%= link_to '<i class="fab fa-twitter"></i>'.html_safe, "https://twitter.com/wfmisiaszek", class: "nav-link" %>
+        <%= link_to '<i class="fab fa-instagram"></i>'.html_safe, "https://www.instagram.com/wfteddybear/", class: "nav-link" %>
+        <%= link_to '<i class="fab fa-linkedin"></i>'.html_safe, "https://www.linkedin.com/in/williamfrancismisiaszek/", class: "nav-link" %>
+
+        </div>
+</div>
+</div>
+
+
 
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -67,10 +54,10 @@
           <%= link_to "Tech", portfolio_path, class:"nav-link" %>
         </li>
         <li class="nav-item <%= 'active' if current_page?(social_path) %>">
-          <%= link_to "Languages", social_path, class:"nav-link" %>
+          <%= link_to "Music", social_path, class:"nav-link" %>
         </li>
         <li class="nav-item <%= 'active' if current_page?(contact_path) %>">
-        <%= link_to "Health", contact_path, class:"nav-link" %>
+        <%= link_to "Language", contact_path, class:"nav-link" %>
       </li>
       
       </ul>

@@ -1,1 +1,96 @@
 @import "bootstrap/scss/bootstrap";
+
+.navbar-brand {
+    margin-bottom: 0px; /* adjust as needed */
+}
+
+h1 {
+    color: #1B7AC4;
+}
+
+h2 {
+    font-weight: bold;
+    color: #000000;
+}
+
+.btn-custom {
+    background-color: #000000;
+    border-color: #000000;
+    color: #ffffff; /* To change text color use 'color', not 'font-color' */
+}
+
+.btn-custom:hover {
+    background-color: #1fda70;
+    border-color: #000000;
+    color: #000000; /* Keep the text color white when hovered */
+}
+
+
+
+
+.navbar {
+    height: 70px; // Adjust as needed
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container .name-and-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // Center vertically
+  }
+  
+
+  .navbar-collapse {
+    padding: 0 15px;
+}
+
+.logo-container {
+    background-color: #F8F8F8;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 5px; /* Adjusted from 10px to 5px */
+    display: flex;
+    align-items: center;
+    flex-direction: row; /* Adjusted from column to row */
+  }
+  
+  .logo-container .avatar {
+    margin-right: 10px; /* Add a little space between the avatar and the text */
+  }
+  
+
+  .spacing-nav {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+  .name-and-icons .social-media-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-left: -7px; /* Add negative margin to move the icons to the left */
+    padding-top: 0px; /* Adjust this value */
+  }
+  
+  .navbar .nav-link i {
+    color: #000000; /* Black hole black */
+  }
+
+
+.logo-container .logo {
+    width: 75px; /* Adjusted from 100px to 75px */
+    height: 75px; /* Adjusted from 100px to 75px */
+}
+
+
+@media (max-width: 768px) {
+    .logo-container .logo {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navbar-collapse {
+        padding: 0 15px;
+    }
+}
