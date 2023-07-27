@@ -15,20 +15,22 @@
 
 <body>
     <div class="container mt-2 pb-5">
-        <h1 class="text-center text-primary mb-3 animate__animated animate__fadeInDown">Namie - iOS Application</h1>
+        <h1 class="text-center text-primary mb-3 animate__animated animate__fadeInDown">Apps & Sites</h1>
 
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
+            <h2 class="text-center mt-4 display-9 animate__animated animate__fadeIn"><strong>Namie - iOS</strong></h2>
+
                 <div class="updates">
-                <h2 class="display-9 animate__animated animate__fadeIn"><strong>Updates:</strong></h2>
-                    <ol class=" animate__animated animate__fadeIn">
+                <h4 class="mt-4 display-9 animate__animated animate__fadeIn"><strong>Last Updated (07/15/2023):</strong></h4>
+                <ol class=" animate__animated animate__fadeIn">
                         <li class="list-group-item">1. New Default Address Made. Now just write and save!</li>
                         <li class="list-group-item">2. Fine tuning notifications.</li>
                         <li class="list-group-item">3. New default picture for locations.</li>
                     </ol>
                 </div>
 
-                <a class="btn btn-custom animate__animated animate__fadeIn my-4" href="https://testflight.apple.com/join/rIyScvls" role="button">Join the Namie Beta</a>
+                <a class="btn btn-custom animate__animated animate__fadeIn mt-1 mb-4" href="https://testflight.apple.com/join/rIyScvls" role="button">Join the Namie Beta</a>
 
 
                 <div class="intro my-2">
@@ -55,6 +57,26 @@
                 </div>
             </div>
         </div>
+
+        <div class="container mt-4 pb-5">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h2 class="text-center mt-3 display-9 animate__animated animate__fadeIn"><strong>Thomson Fabrication & Design</strong></h2>
+                <p class="lead animate__animated animate__fadeIn">I had the opportunity to collaborate with Otis Thompson, the visionary behind Thomson Fabrication & Design. Our goal was to revitalize the online presence of his exceptional business. </p>
+                <p class="lead animate__animated animate__fadeIn">Working closely with him, we designed and implemented a website that serves as an authentic reflection of the company's commitment to excellence and innovation. </p>
+                <p class="lead animate__animated animate__fadeIn">It was my responsibility to not just manage, but also strategically enhance their digital footprint, effectively conveying the unique essence of Thomson Fabrication & Design to a wider audience.</p>
+                <a class="btn btn-custom animate__animated animate__fadeIn mt-3" href="https://www.thomsonfabrication.com" role="button">Explore the site</a>
+            </div>
+        </div>
+        <div class="app-images d-flex justify-content-around mt-3 animate__animated animate__fadeIn">
+                    <a href="<%= asset_path 'otis1.png' %>">
+                        <%= image_tag "otis1.png", alt: "Thomson Fab Image 1", class: "img-fluid", style: "max-width: 500px;" %>
+                    </a>
+                    <a href="<%= asset_path 'otis2.png' %>">
+                        <%= image_tag "otis2.png", alt: "Thomson Fab Image 2", class: "img-fluid", style: "max-width: 500px;" %>
+                    </a>
+                </div>
+    </div>
     </div>
 
     <!-- Bootstrap JS and jQuery -->
