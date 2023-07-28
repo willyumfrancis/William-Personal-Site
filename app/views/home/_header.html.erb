@@ -13,6 +13,14 @@
         background-color: #000000;
     }
 
+    @keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.icon-spin:active {
+  animation: spin 0.5s linear;
+
 
 
   </style>
@@ -29,11 +37,11 @@
 <div class="name-and-icons">
     <%= link_to "William Francis", root_path, class: "navbar-brand spacing-nav", style: "color: black; align-self: center;" %>
     <div class="social-media-icons">
-        <%= link_to '<i class="fab fa-tiktok"></i>'.html_safe, "https://www.tiktok.com/@beszos?lang=en", class: "nav-link" %>
-        <%= link_to '<i class="fab fa-twitter"></i>'.html_safe, "https://twitter.com/wfmisiaszek", class: "nav-link" %>
-        <%= link_to '<i class="fab fa-instagram"></i>'.html_safe, "https://www.instagram.com/wfteddybear/", class: "nav-link" %>
-        <%= link_to '<i class="fab fa-linkedin"></i>'.html_safe, "https://www.linkedin.com/in/williamfrancismisiaszek/", class: "nav-link" %>
-
+    <%= link_to '<i class="fab fa-tiktok icon-spin"></i>'.html_safe, "https://www.tiktok.com/@beszos?lang=en", class: "nav-link" %>
+    <%= link_to '<i class="fab fa-twitter icon-spin"></i>'.html_safe, "https://twitter.com/wfmisiaszek", class: "nav-link" %>
+    <%= link_to '<i class="fab fa-instagram icon-spin"></i>'.html_safe, "https://www.instagram.com/wfteddybear/", class: "nav-link" %>
+    <%= link_to '<i class="fab fa-linkedin icon-spin"></i>'.html_safe, "https://www.linkedin.com/in/williamfrancismisiaszek/", class: "nav-link" %>
+    
         </div>
 </div>
 </div>
