@@ -21,7 +21,9 @@
   }
 
 
-  .slide-in {
+@media (max-width: 768px) {
+
+.slide-in {
   animation: slide-in 0.5s forwards;
 }
 
@@ -38,9 +40,6 @@
   0% { transform: translateY(0); }
   100% { transform: translateY(-100%); }
 }
-
-
-@media (max-width: 768px) {
     .logo-container .logo {
         width: 25px; /* Adjusted from 35px to 25px */
         height: 25px; /* Adjusted from 35px to 25px */
@@ -72,6 +71,11 @@
 
 .spin {
   animation: spin 2s linear;
+}
+
+.nav-link:hover i {
+  transform: scale(1.17);
+  transition: transform 0.3s ease-in-out;
 }
 
 
