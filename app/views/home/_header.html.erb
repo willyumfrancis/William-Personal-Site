@@ -1,17 +1,69 @@
 <head>
   <style>
 
+
+.logo-container {
+  height: 70px;
+    background-color: #F8F8F8;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 5px; /* Adjusted from 10px to 5px */
+    display: flex;
+    align-items: center;
+    flex-direction: row; /* Adjusted from column to row */
+      margin-left: -10px; /* Added this line */
+
+  }
+  
+  .logo-container .avatar {
+    margin-right: 10px; /* Add a little space between the avatar and the text */
+    transform: scale(0.85); /* Reduce size by 15% */
+
+  }
+
+
+  .slide-in {
+  animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+  animation: slide-out 0.5s forwards;
+}
+
+@keyframes slide-in {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes slide-out {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
+
 @media (max-width: 768px) {
     .logo-container .logo {
         width: 25px; /* Adjusted from 35px to 25px */
         height: 25px; /* Adjusted from 35px to 25px */
     }
 
-}
+    .logo-container {
+    height: 70px;
+    background-color: #F8F8F8;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 5px; /* Adjusted from 10px to 5px */
+    display: flex;
+    align-items: center;
+    flex-direction: row; /* Adjusted from column to row */
+    margin-left: -10px; /* Added this line */
+    margin-top: -8px;
+
+  }
+  
 
   .navbar-collapse {
         background-color: #000000;
     }
+  }
 
     @keyframes spin {
   0% { transform: rotate(0deg); }
@@ -32,7 +84,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #000000;">
 <div class="logo-container">
 <div class="avatar" style="cursor: pointer; border: 3px solid white; border-radius: 50%;" onclick="location.href='<%= root_path %>'">
-    <%= image_tag "profilepic.jpg", class: "logo", width: '35', height: '35', style: 'border-radius: 15%;' %>
+    <%= image_tag "profilepic.jpg", class: "logo", width: '35', height: '20', style: 'border-radius: 15%;' %>
 </div>
 
 <div class="name-and-icons">
