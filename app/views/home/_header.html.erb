@@ -18,8 +18,9 @@
   100% { transform: rotate(360deg); }
 }
 
-.icon-spin:active {
-  animation: spin 0.5s linear;
+.spin {
+  animation: spin 2s linear;
+}
 
 
 
@@ -37,11 +38,11 @@
 <div class="name-and-icons">
     <%= link_to "William Francis", root_path, class: "navbar-brand spacing-nav", style: "color: black; align-self: center;" %>
     <div class="social-media-icons">
-    <%= link_to '<i class="fab fa-tiktok icon-spin"></i>'.html_safe, "https://www.tiktok.com/@beszos?lang=en", class: "nav-link" %>
-    <%= link_to '<i class="fab fa-twitter icon-spin"></i>'.html_safe, "https://twitter.com/wfmisiaszek", class: "nav-link" %>
-    <%= link_to '<i class="fab fa-instagram icon-spin"></i>'.html_safe, "https://www.instagram.com/wfteddybear/", class: "nav-link" %>
-    <%= link_to '<i class="fab fa-linkedin icon-spin"></i>'.html_safe, "https://www.linkedin.com/in/williamfrancismisiaszek/", class: "nav-link" %>
-    
+    <%= link_to '<i class="fab fa-tiktok icon-spin-on-click"></i>'.html_safe, "https://www.tiktok.com/@beszos?lang=en", class: "nav-link" %>
+<%= link_to '<i class="fab fa-twitter icon-spin-on-click"></i>'.html_safe, "https://twitter.com/wfmisiaszek", class: "nav-link" %>
+<%= link_to '<i class="fab fa-instagram icon-spin-on-click"></i>'.html_safe, "https://www.instagram.com/wfteddybear/", class: "nav-link" %>
+<%= link_to '<i class="fab fa-linkedin icon-spin-on-click"></i>'.html_safe, "https://www.linkedin.com/in/williamfrancismisiaszek/", class: "nav-link" %>
+
         </div>
 </div>
 </div>
@@ -75,8 +76,15 @@
     
     </div>
   </nav>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script>
+$(document).ready(function(){
+  $(".icon-spin-on-click").click(function(){
+    $(this).addClass("spin");
+  });
+});
+
+
   document.addEventListener("DOMContentLoaded", () => {
     if (window.matchMedia("(min-width: 768px)").matches) {
       const header = document.querySelector("nav.navbar.sticky-top");
