@@ -3,7 +3,7 @@
 Rails.application.config.assets.paths << Rails.root.join('app', 'assets', 'audio')
 Rails.application.config.assets.precompile += %w( *.mp3 *.m4a )
 
-
+Rails.application.config.assets.precompile += %w( favicon.jpeg )
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = "1.0"
 
