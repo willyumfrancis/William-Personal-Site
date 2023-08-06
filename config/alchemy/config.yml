@@ -96,7 +96,7 @@ default_site:
 # This is the default language when seeding.
 default_language:
   code: en
-  name: William Francis
+  name: English
   page_layout: index
   frontpage_name: Index
 

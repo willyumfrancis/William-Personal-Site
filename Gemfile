@@ -83,3 +83,7 @@ end
 
 gem 'cssbundling-rails'
 
+
+gem "alchemy_cms", "~> 7.0"
+
+gem "alchemy-devise", "~> 7.0"
