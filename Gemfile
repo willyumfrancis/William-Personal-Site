@@ -17,6 +17,9 @@ gem "sprockets-rails"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
+gem 'alchemy_cms'
+
+
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
@@ -81,3 +84,7 @@ group :test do
 end
 
 gem 'cssbundling-rails'
+
+gem "alchemy_cms", "~> 7.0"
+
+gem "alchemy-devise", "~> 7.0"

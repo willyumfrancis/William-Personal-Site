@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Alchemy::Engine => '/admin'
+
   devise_for :users
 
   get 'home/about'
