@@ -7,13 +7,13 @@
   elements: [article]
   autogenerate: [article]
 
-- name: contact
+name: contact
   cache: false
   unique: true
   elements: [headline, contactform, text]
   autogenerate: [headline, contactform]
 
-  - name: page
+  name: page
   cache: false
   unique: false
   elements: [headline, text]
