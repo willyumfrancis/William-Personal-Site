@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'portfolio', to: 'portfolio#index', as: 'portfolio'
   get 'social', to: 'social#index', as: 'social'
   get 'contact', to: 'contact#index', as: 'contact'
+  get 'minor', to: 'minor#index', as: 'minor'
   get 'search/google', to: 'search#google'
 
 
