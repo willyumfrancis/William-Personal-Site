@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   get 'contact', to: 'contact#index', as: 'contact'
   get 'search/google', to: 'search#google'
 
+  # config/routes.rb
+post 'transcribe_audio', to: 'transcriptions#create'
+
+
 
 end
 
