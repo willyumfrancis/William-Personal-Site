@@ -23,8 +23,11 @@ class TranscriptionsController < ApplicationController
           file: audio_file.read,
           model: model_name,  # Enclosed in quotes
           response_format: response_format
-        }
+        },
+        multipart: true  # Add this line
       )
+
+      puts "Request body: #{response.request.body_stream.read}"
 
       puts "Whisper API response: #{response.body}"
 
