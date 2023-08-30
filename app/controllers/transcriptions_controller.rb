@@ -15,7 +15,7 @@ class TranscriptionsController < ApplicationController
     response_format = "json" # or "text" based on your needs
     
     response = HTTParty.post(
-      'https://api.openai.com/v1/whisper/asr', # Confirm this URL is correct
+      'https://api.openai.com/v1/audio/transcriptions', # Confirm this URL is correct
       headers: { "Authorization" => "Bearer #{ENV['WHISPER_API_KEY']}" },
       body: { 
         file: audio_file.read,
