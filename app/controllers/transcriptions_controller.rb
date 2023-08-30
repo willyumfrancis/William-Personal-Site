@@ -9,7 +9,7 @@ class TranscriptionsController < ApplicationController
     audio_file = params[:audio]
     response = HTTParty.post(
       'https://api.openai.com/v1/whisper/asr',
-      headers: { "Authorization" => "Bearer your-whisper-api-key" },
+      headers: { "Authorization" => "Bearer #{ENV['WHISPER_API_KEY']}" },
       body: { file: audio_file.read }
     )
     if response.code == 200
