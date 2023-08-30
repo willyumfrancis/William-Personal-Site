@@ -30,6 +30,9 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem "ruby-openai"
+
+
 gem 'httparty'
 
 gem 'rest-client'
