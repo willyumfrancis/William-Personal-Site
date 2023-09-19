@@ -15,20 +15,23 @@
 
 <body>
     <div class="container mt-2 pb-5">
-        <h1 class="text-center text-primary mb-3 animate__animated animate__fadeInDown">Apps & Sites</h1>
+    <h1 class="text-center text-primary mb-3 animate__animated animate__fadeInDown" style="color: #1fda70">Apps & Sites</h1>
 
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
             <h2 class="text-center mt-4 display-9 animate__animated animate__fadeIn"><strong>Namie - iOS</strong></h2>
 
-                <div class="updates">
-                <h4 class="mt-4 display-9 animate__animated animate__fadeIn"><strong>Last Updated (07/15/2023):</strong></h4>
-                <ol class=" animate__animated animate__fadeIn">
-                        <li class="list-group-item">1. New Default Address Made. Now just write and save!</li>
-                        <li class="list-group-item">2. Fine tuning notifications.</li>
-                        <li class="list-group-item">3. New default picture for locations.</li>
-                    </ol>
-                </div>
+            <div class="updates">
+    <h4 class="mt-4 display-9 animate__animated animate__fadeIn"><strong>Last Updated (09/19/2023):</strong></h4>
+    <ol class=" animate__animated animate__fadeIn">
+        <!-- New Features -->
+        <li class="list-group-item" style="margin-bottom: 10px;"><strong>1. Notifications</strong> - Get the last three notes of a location as you walk-in. Added 15 geofences on app start-up.</li>
+        <li class="list-group-item" style="margin-bottom: 10px;"><strong>2. Design Update</strong> - New UI/UX. Get reminded of streets as you put notes in (temporary).</li>
+        <li class="list-group-item" style="margin-bottom: 10px;"><strong>3. New "Expand" Feature</strong> - Swipe Right to expand notes for a full view. Useful when used with voice feature.</li>
+    </ol>
+</div>
+
+        
 
                 <a class="btn btn-custom animate__animated animate__fadeIn mt-1 mb-4" href="https://testflight.apple.com/join/rIyScvls" role="button">Join the Namie Beta</a>
 
@@ -36,26 +39,62 @@
                 <div class="intro my-2">
                 <p class="lead animate__animated animate__fadeIn">This app will help you remember the people you frequently bump into. Jot a name down and add a detail about them.</p>
                 <p class="lead animate__animated animate__fadeIn">Namie will ping you the last note you wrote down at a location as you get close to it (for those nonchalant glances at your phone before engaging in conversation).</p>
-                <p class="lead animate__animated animate__fadeIn">I designed the app to be easy to use. Text me (w/ a screenshot) if you find a weird bug!</p>
-                <p class="lead animate__animated animate__fadeIn">Go out and meet people! Meet the owner and star employees of your favorite spots.</p>
-                <blockquote class="lead animate__animated animate__fadeIn" style="font-size: 1.5em; font-weight: bold; color: #007bff;">"People react differently when you remember the little things."</blockquote>
             </div>
 
-                <div class="app-images d-flex justify-content-around mt-3 animate__animated animate__fadeIn">
-                    <a href="<%= asset_path 'app1.jpeg' %>">
-                        <%= image_tag "app1.jpeg", alt: "App1 Image", class: "img-fluid", style: "max-width: 200px;" %>
-                    </a>
-                    <a href="<%= asset_path 'app2.jpeg' %>">
-                        <%= image_tag "app2.jpeg", alt: "App2 Image", class: "img-fluid", style: "max-width: 200px;" %>
+            <blockquote class="lead animate__animated animate__fadeIn" style="font-size: 1.5em; font-weight: bold;">Current Build</blockquote>
+            <!-- Current Build images -->
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <a href="<%= asset_path 'current1.jpeg' %>">
+                        <%= image_tag "current1.jpeg", alt: "Current1 Image", class: "img-fluid", style: "max-width: 200px; margin-right: 20px;" %>
                     </a>
                 </div>
-                
-                <div class="mt-3 animate__animated animate__fadeIn">
-                    <a href="<%= asset_path 'StoryBoard.png' %>">
-                        <%= image_tag "StoryBoard.png", alt: "Storyboard Image", class: "img-fluid", style: "max-width: 500px;" %>
+                <div class="col-auto">
+                    <a href="<%= asset_path 'current2.jpeg' %>">
+                        <%= image_tag "current2.jpeg", alt: "Current2 Image", class: "img-fluid", style: "max-width: 200px; margin-left: 20px;" %>
                     </a>
                 </div>
             </div>
+    
+            <div class="row justify-content-center mt-3">
+                <div class="col-auto">
+                    <a href="<%= asset_path 'current3.jpeg' %>">
+                        <%= image_tag "current3.jpeg", alt: "Current3 Image", class: "img-fluid", style: "max-width: 200px;" %>
+                    </a>
+                </div>
+            </div>
+            <div style="padding-top: 30px;"></div>
+
+            <!-- Alpha Build Section -->
+            <blockquote class="lead animate__animated animate__fadeIn" style="font-size: 1.5em; font-weight: bold;">Alpha Build</blockquote>
+
+<div class="container mt-3 animate__animated animate__fadeIn">
+
+    <!-- Row for the first two images -->
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <a href="<%= asset_path 'app1.jpeg' %>">
+                <%= image_tag "app1.jpeg", alt: "App1 Image", class: "img-fluid", style: "max-width: 200px; margin-right: 20px;" %>
+            </a>
+        </div>
+        <div class="col-auto">
+            <a href="<%= asset_path 'app2.jpeg' %>">
+                <%= image_tag "app2.jpeg", alt: "App2 Image", class: "img-fluid", style: "max-width: 200px; margin-left: 20px;" %>
+            </a>
+        </div>
+    </div>
+
+    <!-- Row for the third image -->
+    <div class="row justify-content-center mt-3">
+        <div class="col-auto">
+            <a href="<%= asset_path 'StoryBoard.png' %>">
+                <%= image_tag "StoryBoard.png", alt: "Storyboard Image", class: "img-fluid", style: "max-width: 500px;" %>
+            </a>
+        </div>
+    </div>
+
+</div>
+
         </div>
 
     <div class="container mt-4 pb-5">
@@ -80,14 +119,17 @@
                     </a>
                 </div>
                 <!-- New Video Section -->
-    <div class="video-section mt-3 animate__animated animate__fadeIn">
-        <video controls style="width: 100%;">
-            <source src="your_video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <!-- Debugging print statement -->
-        <p>Debug: Video section loaded.</p>
-    </div>
+                
+                <!--
+                <div class="video-section mt-3 animate__animated animate__fadeIn">
+                    <video controls style="width: 100%;">
+                        <source src="your_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Debug: Video section loaded.</p>
+                </div>
+                -->
+                
     
 </div>
 
