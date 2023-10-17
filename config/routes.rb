@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'search/google', to: 'search#google'
+
   devise_for :users
 
   get 'home/about'
@@ -8,7 +10,6 @@ Rails.application.routes.draw do
   get 'portfolio', to: 'portfolio#index', as: 'portfolio'
   get 'social', to: 'social#index', as: 'social'
   get 'contact', to: 'contact#index', as: 'contact'
-  get 'search/google', to: 'search#google'
 
   # config/routes.rb
 post 'transcribe_audio', to: 'transcriptions#create'
