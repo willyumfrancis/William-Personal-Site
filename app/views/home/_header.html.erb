@@ -126,7 +126,12 @@
 </li>
 
 </ul>
-     
+      <div class="ml-auto">
+  <%= form_tag search_google_path, method: :get, class: 'form-inline my-2 my-lg-0' do %>
+    <%= text_field_tag :query, params[:query], placeholder: 'Search', class: 'form-control mr-sm-2', 'aria-label': 'Search' %>
+    <%= submit_tag 'Search', class: 'btn btn-outline-light my-2 my-sm-0', name: nil %>
+  <% end %>
+</div>
 
     
     </div>
