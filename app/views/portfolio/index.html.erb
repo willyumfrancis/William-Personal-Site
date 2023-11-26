@@ -4,24 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Namie - iOS Application</title>
-
+    <title>Portfolio - William Francis Misiaszek</title>
 
     <!-- Animate.css for animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="/assets/application.css">
-
 </head>
 
 <body>
     <div class="container mt-2 pb-5">
-    <h1 class="text-center text-primary mb-3 animate__animated animate__fadeInDown" style="color: #1fda70">Apps & Sites</h1>
+        <h1 class="text-center text-primary mb-3 animate__animated animate__fadeInDown" style="color: #1fda70">Apps & Sites</h1>
 
+        <!-- PoliScope Section -->
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
-            <h2 class="text-center mt-4 display-9 animate__animated animate__fadeIn"><strong>Namie - iOS</strong></h2>
+                <h2 class="text-center mt-4 display-9 animate__animated animate__fadeIn"><strong>PoliScope - Digital Legislative Platform</strong></h2>
+                <div class="updates">
+                    <h4 class="mt-4 display-9 animate__animated animate__fadeIn"><strong>Latest Developments (11/25/2023):</strong></h4>
+                    <ol class="animate__animated animate__fadeIn">
+                        <!-- New Features -->
+                        <li class="list-group-item" style="margin-bottom: 10px;"><strong>1. Interactive Timeline</strong> - Explore an interactive timeline of bills and resolutions in San Francisco.</li>
+                        <li class="list-group-item" style="margin-bottom: 10px;"><strong>2. Supervisor Profiles</strong> - Detailed pages for each Board of Supervisors member, including voting patterns and stances.</li>
+                        <li class="list-group-item" style="margin-bottom: 10px;"><strong>3. Enhanced Data Integration</strong> - Improved amalgamation of data from various sources for a comprehensive view.</li>
+                    </ol>
+                    <div class="app-images d-flex justify-content-around mt-3 animate__animated animate__fadeIn">
+                    <a href="<%= asset_path 'poli1.png' %>">
+                        <%= image_tag "poli1.png", alt: "PoliScope Image 1", class: "img-fluid", style: "max-width: 500px;" %>
+                    </a>
+                    <a href="<%= asset_path 'poli2.png' %>">
+                        <%= image_tag "poli2.png", alt: "PoliScope Image 2", class: "img-fluid", style: "max-width: 500px;" %>
+                    </a>
+                </div>
+                </div>
 
-            <div class="updates">
+                <a class="btn btn-custom animate__animated animate__fadeIn mt-1 mb-4" href="https://www.poliscope.org" role="button">Visit PoliScope</a>
+
+                <div class="intro my-2">
+                    <p class="lead animate__animated animate__fadeIn">PoliScope aims to make the legislative process more transparent and engaging. It offers a digital window into the San Francisco Board of Supervisors, helping citizens to become more informed and involved.</p>
+                    <p class="lead animate__animated animate__fadeIn">The platform presents data in a visually intuitive way, allowing users to explore recent resolutions, voting patterns, and politician stances, fostering a better understanding of local governance.</p>
+                </div>
+                </div>
+        
+
+                <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h2 class="text-center mt-4 display-9 animate__animated animate__fadeIn"><strong>Namie - iOS</strong></h2>
+                <!-- Namie Content -->
     <h4 class="mt-4 display-9 animate__animated animate__fadeIn"><strong>Last Updated (09/19/2023):</strong></h4>
     <ol class=" animate__animated animate__fadeIn">
         <!-- New Features -->
@@ -29,9 +57,6 @@
         <li class="list-group-item" style="margin-bottom: 10px;"><strong>2. Design Update</strong> - New UI/UX. Get reminded of streets as you put notes in (temporary).</li>
         <li class="list-group-item" style="margin-bottom: 10px;"><strong>3. New "Expand" Feature</strong> - Swipe Right to expand notes for a full view. Useful when used with voice feature.</li>
     </ol>
-</div>
-
-        
 
                 <a class="btn btn-custom animate__animated animate__fadeIn mt-1 mb-4" href="https://testflight.apple.com/join/rIyScvls" role="button">Join the Namie Beta</a>
 
@@ -71,37 +96,32 @@
 <div class="container mt-3 animate__animated animate__fadeIn">
 
     <!-- Row for the first two images -->
+
     <div class="row justify-content-center">
-        <div class="col-auto">
-            <a href="<%= asset_path 'app1.jpeg' %>">
-                <%= image_tag "app1.jpeg", alt: "App1 Image", class: "img-fluid", style: "max-width: 200px; margin-right: 20px;" %>
-            </a>
-        </div>
-        <div class="col-auto">
-            <a href="<%= asset_path 'app2.jpeg' %>">
-                <%= image_tag "app2.jpeg", alt: "App2 Image", class: "img-fluid", style: "max-width: 200px; margin-left: 20px;" %>
-            </a>
-        </div>
+    <!-- First Image -->
+    <div class="col-auto">
+        <a href="<%= asset_path 'app1.jpeg' %>">
+            <%= image_tag "app1.jpeg", alt: "App1 Image", class: "img-fluid", style: "max-width: 200px; margin-right: 20px;" %>
+        </a>
     </div>
 
-    <!-- Row for the third image -->
-    <div class="row justify-content-center mt-3">
-        <div class="col-auto">
-            <a href="<%= asset_path 'StoryBoard.png' %>">
-                <%= image_tag "StoryBoard.png", alt: "Storyboard Image", class: "img-fluid", style: "max-width: 500px;" %>
-            </a>
-        </div>
-    </div>
 
 </div>
 
-        </div>
+<!-- Row for the Third Image -->
+<div class="row justify-content-center mt-3">
+    <div class="col-auto">
+        <a href="<%= asset_path 'StoryBoard.png' %>">
+            <%= image_tag "StoryBoard.png", alt: "Storyboard Image", class: "img-fluid", style: "max-width: 500px;" %>
+        </a>
+    </div>
 
-    <div class="container mt-4 pb-5">
+
     <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-            <h2 class="text-center mt-3 display-9 animate__animated animate__fadeIn"><strong>Stanford Magazine</strong></h2>
-            <p class="lead animate__animated animate__fadeIn">As the Technical Product Manager at the Alumni Association, I've expanded my role beyond traditional responsibilities. Not only do I shape product strategy and influence key stakeholders, but I also directly contribute to the codebase, uniting leadership with technical acuity.</p>
+    <div class="col-lg-8 offset-lg-2">
+        <h2 class="text-center mt-3 display-9 animate__animated animate__fadeIn"><strong>Stanford Magazine</strong></h2>
+        <!-- Stanford Magazine Content -->
+        <p class="lead animate__animated animate__fadeIn">As the Technical Product Manager at the Alumni Association, I've expanded my role beyond traditional responsibilities. Not only do I shape product strategy and influence key stakeholders, but I also directly contribute to the codebase, uniting leadership with technical acuity.</p>
 
                 <p class="lead animate__animated animate__fadeIn">One significant application of my blended skillset is the online version of our magazine. I've been instrumental in optimizing the front-end experience for our alumni community while simultaneously directing the strategic course of our product development.</p>
                 
@@ -118,41 +138,6 @@
                         <%= image_tag "stan2.png", alt: "Stanford Magazine Image 2", class: "img-fluid", style: "max-width: 500px;" %>
                     </a>
                 </div>
-                <!-- New Video Section -->
-                
-                <!--
-                <div class="video-section mt-3 animate__animated animate__fadeIn">
-                    <video controls style="width: 100%;">
-                        <source src="your_video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <p>Debug: Video section loaded.</p>
-                </div>
-                -->
-                
-    
-</div>
-
-        <div class="container mt-4 pb-5">
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-                <h2 class="text-center mt-3 display-9 animate__animated animate__fadeIn"><strong>Thomson Fabrication & Design</strong></h2>
-                <p class="lead animate__animated animate__fadeIn">I had the opportunity to collaborate with Otis Thompson, the visionary behind Thomson Fabrication & Design. Our goal was to revitalize the online presence of his exceptional business. </p>
-                <p class="lead animate__animated animate__fadeIn">Working closely with him, we designed and implemented a website that serves as an authentic reflection of the company's commitment to excellence and innovation. </p>
-                <p class="lead animate__animated animate__fadeIn">It was my responsibility to not just manage, but also strategically enhance their digital footprint, effectively conveying the unique essence of Thomson Fabrication & Design to a wider audience.</p>
-                <a class="btn btn-custom animate__animated animate__fadeIn mt-3" href="https://www.thomsonfabrication.com" role="button">Explore the site</a>
-            </div>
-        </div>
-        <div class="app-images d-flex justify-content-around mt-3 animate__animated animate__fadeIn">
-                    <a href="<%= asset_path 'otis1.png' %>">
-                        <%= image_tag "otis1.png", alt: "Thomson Fab Image 1", class: "img-fluid", style: "max-width: 500px;" %>
-                    </a>
-                    <a href="<%= asset_path 'otis2.png' %>">
-                        <%= image_tag "otis2.png", alt: "Thomson Fab Image 2", class: "img-fluid", style: "max-width: 500px;" %>
-                    </a>
-                </div>
-    </div>
-    </div>
 
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
