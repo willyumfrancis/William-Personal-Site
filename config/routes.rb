@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'portfolio', to: 'portfolio#index', as: 'portfolio'
   get 'social', to: 'social#index', as: 'social'
   get 'contact', to: 'contact#index', as: 'contact'
+  get 'namie', to: 'static_pages#namie', as: 'namie'
+
 
   # config/routes.rb
 post 'transcribe_audio', to: 'transcriptions#create'
