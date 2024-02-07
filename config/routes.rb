@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   root 'home#index'
   get "home/friends"
   resources :friends
-  get 'portfolio', to: 'portfolio#index', as: 'portfolio'
-  get 'social', to: 'social#index', as: 'social'
-  get 'contact', to: 'contact#index', as: 'contact'
-  get 'namie', to: 'static_pages#namie', as: 'namie'
+  get 'projects', to: 'portfolio#index', as: 'projects'
+  get 'services', to: 'social#index', as: 'services'
+  get 'about', to: 'contact#index', as: 'about'
+  get 'contact', to: 'static_pages#namie', as: 'contact'
 
 
   # config/routes.rb
