@@ -1,8 +1,83 @@
 <!-- app/views/builds/show.html.erb -->
 
-<h1>Build <%= @build_id %></h1>
-<p>
-  <!-- Insert content for build here. You can use @build_id to change content dynamically. -->
-  <!-- For example, you might fetch text or images from the database that corresponds to the build ID -->
-</p>
+<h1 class="build-title">Build <%= @build_id %></h1>
 
+<div class="build-content">
+  <% case @build_id %>
+  <% when "1" %>
+    <h2>SOMA Office</h2>
+    <p>This large commercial office space remodel included the following work:</p>
+    <ul>
+      <li>Original flooring restoration</li>
+      <li>Exposed ceiling timber</li>
+      <li>Custom bathrooms</li>
+      <li>Kitchenette areas</li>
+      <li>Fabricated barn doors</li>
+      <li>Architectural lightwell</li>
+      <li>Energy-efficient roof deck installation</li>
+    </ul>
+
+  <% when "2" %>
+    <h2>Mission District Retail Space</h2>
+    <p>A complete transformation of a vintage storefront into a modern retail space:</p>
+    <ul>
+      <li>Glass facade installation</li>
+      <li>Open-concept floor plan</li>
+      <li>Polished concrete floors</li>
+      <li>Custom shelving units</li>
+      <li>LED lighting system</li>
+      <li>Outdoor signage</li>
+    </ul>
+
+  <% when "3" %>
+    <h2>Pacific Heights Residence</h2>
+    <p>Luxury home renovation with a focus on preserving historical details:</p>
+    <ul>
+      <li>Period-appropriate moldings and trims</li>
+      <li>Marble countertop restoration</li>
+      <li>Smart home automation</li>
+      <li>Wine cellar expansion</li>
+      <li>Landscape architecture</li>
+      <li>Master suite redesign</li>
+    </ul>
+
+  <% when "4" %>
+    <h2>Downtown Condo High-Rise</h2>
+    <p>High-end condo renovation with panoramic views of the city skyline:</p>
+    <ul>
+      <li>Floor-to-ceiling window installation</li>
+      <li>Hardwood flooring upgrade</li>
+      <li>Custom kitchen remodel</li>
+      <li>Walk-in closet organization system</li>
+      <li>Modernized bathroom fixtures</li>
+      <li>Acoustic soundproofing</li>
+    </ul>
+
+  <% when "5" %>
+    <h2>Dogpatch Warehouse Conversion</h2>
+    <p>Industrial space converted into a cutting-edge tech office:</p>
+    <ul>
+      <li>Open-plan workspace design</li>
+      <li>Mezzanine level addition</li>
+      <li>Skylight installations for natural light</li>
+      <li>Exposed brick interior walls</li>
+      <li>Eco-friendly heating and cooling systems</li>
+      <li>Collaborative lounge areas</li>
+    </ul>
+
+  <% when "6" %>
+    <h2>Castro Street Retail and Living Space</h2>
+    <p>Mixed-use development in the heart of a vibrant neighborhood:</p>
+    <ul>
+      <li>Street-level commercial retail fit-out</li>
+      <li>Residential units with private balconies</li>
+      <li>Roof garden and community space</li>
+      <li>Sustainable materials and finishes</li>
+      <li>Automated parking system</li>
+      <li>Earthquake retrofitting</li>
+    </ul>
+
+  <% else %>
+    <p>Information about this build is not available at the moment.</p>
+  <% end %>
+</div>
