@@ -9,138 +9,86 @@
     <!-- Animate.css for animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="/assets/application.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+
+<style>
+
+.row {
+    display: flex;
+    justify-content: center; /* This will horizontally center the items */
+}
+
+.col-md-6 {
+    display: flex;
+    justify-content: center; /* This centers the content of the column */
+    margin-bottom: 4rem; /* Adjust the bottom margin as needed */
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin: auto; /* This will apply automatic margins on all sides, centering the image */
+}
+
+
+</style>
 
 <body>
     <div class="container mt-2 pb-5">
-    <h1 class="text-center mb-3 animate__animated animate__fadeInDown" style="color: #004085;">Apps & Sites</h1>
+        <h1 class="text-center mb-3 animate__animated animate__fadeInDown" style="color: #004085;">Friendly Neighbor</h1>
 
-        <!-- PoliScope Section -->
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-                <h2 class="text-center display-9 animate__animated animate__fadeIn"><strong>PoliScope - Digital Legislative Platform</strong></h2>
-                <div class="updates">
-                    <h4 class="mt-4 display-9 animate__animated animate__fadeIn"><strong>Latest Developments (11/25/2023):</strong></h4>
-                    <ol class="animate__animated animate__fadeIn">
-                        <!-- New Features -->
-                        <li class="list-group-item" style="margin-bottom: 10px;"><strong>1. Interactive Timeline</strong> - Explore an interactive timeline of bills and resolutions in San Francisco.</li>
-                        <li class="list-group-item" style="margin-bottom: 10px;"><strong>2. Supervisor Profiles</strong> - Detailed pages for each Board of Supervisors member, including voting patterns and stances.</li>
-                        <li class="list-group-item" style="margin-bottom: 10px;"><strong>3. Enhanced Data Integration</strong> - Improved amalgamation of data from various sources for a comprehensive view.</li>
-                    </ol>
-                    <div class="app-images d-flex justify-content-around mt-3 animate__animated animate__fadeIn">
-                    <a href="<%= asset_path 'poli1.png' %>">
-                        <%= image_tag "poli1.png", alt: "PoliScope Image 1", class: "img-fluid", style: "max-width: 500px;" %>
-                    </a>
-                    <a href="<%= asset_path 'poli2.png' %>">
-                        <%= image_tag "poli2.png", alt: "PoliScope Image 2", class: "img-fluid", style: "max-width: 500px;" %>
-                    </a>
-                </div>
-                </div>
+        <!-- Your existing sections here -->
 
-                <a class="btn btn-custom animate__animated animate__fadeIn mt-1 mb-4" href="https://www.poliscope.org" role="button">Visit PoliScope</a>
-
-                <div class="intro my-2">
-                    <p class="lead animate__animated animate__fadeIn">PoliScope aims to make the legislative process more transparent and engaging. It offers a digital window into the San Francisco Board of Supervisors, helping citizens to become more informed and involved.</p>
-                    <p class="lead animate__animated animate__fadeIn">The platform presents data in a visually intuitive way, allowing users to explore recent resolutions, voting patterns, and politician stances, fostering a better understanding of local governance.</p>
-                </div>
-                </div>
-        
-
-                <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-                <h2 class="text-center mt-4 display-9 animate__animated animate__fadeIn"><strong>Namie - iOS</strong></h2>
-                <!-- Namie Content -->
-    <h4 class="mt-4 display-9 animate__animated animate__fadeIn"><strong>Last Updated (09/19/2023):</strong></h4>
-    <ol class=" animate__animated animate__fadeIn">
-        <!-- New Features -->
-        <li class="list-group-item" style="margin-bottom: 10px;"><strong>1. Notifications</strong> - Get the last three notes of a location as you walk-in. Added 15 geofences on app start-up.</li>
-        <li class="list-group-item" style="margin-bottom: 10px;"><strong>2. Design Update</strong> - New UI/UX. Get reminded of streets as you put notes in (temporary).</li>
-        <li class="list-group-item" style="margin-bottom: 10px;"><strong>3. New "Expand" Feature</strong> - Swipe Right to expand notes for a full view. Useful when used with voice feature.</li>
-    </ol>
-
-                <a class="btn btn-custom animate__animated animate__fadeIn mt-1 mb-4" href="https://testflight.apple.com/join/rIyScvls" role="button">Join the Namie Beta</a>
-
-
-                <div class="intro my-2">
-                <p class="lead animate__animated animate__fadeIn">This app will help you remember the people you frequently bump into. Jot a name down and add a detail about them.</p>
-                <p class="lead animate__animated animate__fadeIn">Namie will ping you the last note you wrote down at a location as you get close to it (for those nonchalant glances at your phone before engaging in conversation).</p>
+        <!-- New Image Gallery Section -->
+        <div class="row justify-content-center mt-4 animate__animated animate__fadeIn">
+            <h2 class="text-center w-100">Project Gallery</h2>
+            <!-- Image 1 -->
+            <div class="col-md-6 mb-4">
+                <a href="link-to-project-1">
+                    <img src="path-to-image-1.jpg" class="img-fluid" alt="Project 1">
+                </a>
             </div>
-
-            <blockquote class="lead animate__animated animate__fadeIn" style="font-size: 1.5em; font-weight: bold;">Current Build</blockquote>
-            <!-- Current Build images -->
-            <div class="row justify-content-center">
-                <div class="col-auto">
-                    <a href="<%= asset_path 'current1.jpeg' %>">
-                        <%= image_tag "current1.jpeg", alt: "Current1 Image", class: "img-fluid", style: "max-width: 200px; margin-right: 20px;" %>
-                    </a>
-                </div>
-                <div class="col-auto">
-                    <a href="<%= asset_path 'current2.jpeg' %>">
-                        <%= image_tag "current2.jpeg", alt: "Current2 Image", class: "img-fluid", style: "max-width: 200px; margin-left: 20px;" %>
-                    </a>
-                </div>
+            <!-- Image 2 -->
+            <div class="col-md-6 mb-4">
+                <a href="link-to-project-2">
+                    <img src="path-to-image-2.jpg" class="img-fluid" alt="Project 2">
+                </a>
             </div>
-    
-            <div class="row justify-content-center mt-3">
-                <div class="col-auto">
-                    <a href="<%= asset_path 'current3.jpeg' %>">
-                        <%= image_tag "current3.jpeg", alt: "Current3 Image", class: "img-fluid", style: "max-width: 200px;" %>
-                    </a>
-                </div>
+            <!-- Image 3 -->
+            <div class="col-md-6 mb-4">
+                <a href="link-to-project-3">
+                    <img src="path-to-image-3.jpg" class="img-fluid" alt="Project 3">
+                </a>
             </div>
-            <div style="padding-top: 30px;"></div>
+            <!-- Image 4 -->
+            <div class="col-md-6 mb-4">
+                <a href="link-to-project-4">
+                    <img src="path-to-image-4.jpg" class="img-fluid" alt="Project 4">
+                </a>
+            </div>
+            <!-- Image 5 -->
+            <div class="col-md-6 mb-4">
+                <a href="link-to-project-5">
+                    <img src="path-to-image-5.jpg" class="img-fluid" alt="Project 5">
+                </a>
+            </div>
+            <!-- Image 6 -->
+            <div class="col-md-6 mb-4">
+                <a href="link-to-project-6">
+                    <img src="path-to-image-6.jpg" class="img-fluid" alt="Project 6">
+                </a>
+            </div>
+        </div>
 
-            <!-- Alpha Build Section -->
-            <blockquote class="lead animate__animated animate__fadeIn" style="font-size: 1.5em; font-weight: bold;">Alpha Build</blockquote>
+        <!-- Continue with your existing HTML structure -->
 
-<div class="container mt-3 animate__animated animate__fadeIn">
-
-    <!-- Row for the first two images -->
-
-    <div class="row justify-content-center">
-    <!-- First Image -->
-    <div class="col-auto">
-        <a href="<%= asset_path 'app1.jpeg' %>">
-            <%= image_tag "app1.jpeg", alt: "App1 Image", class: "img-fluid", style: "max-width: 200px; margin-right: 20px;" %>
-        </a>
+        <!-- Bootstrap JS and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     </div>
-
-
-</div>
-
-<!-- Row for the Third Image -->
-<div class="row justify-content-center mt-3">
-    <div class="col-auto">
-        <a href="<%= asset_path 'StoryBoard.png' %>">
-            <%= image_tag "StoryBoard.png", alt: "Storyboard Image", class: "img-fluid", style: "max-width: 500px;" %>
-        </a>
-    </div>
-
-
-    <h2 class="text-center mt-3 display-9 animate__animated animate__fadeIn"><strong>Stanford Magazine</strong></h2>
-    <div class="lead animate__animated animate__fadeIn" style="font-size: 1em; line-height: 1.6;">
-        <!-- Stanford Magazine Content -->
-        <p class="lead animate__animated animate__fadeIn">As the Technical Product Manager at the Alumni Association, I've expanded my role beyond traditional responsibilities. Not only do I shape product strategy and influence key stakeholders, but I also directly contribute to the codebase, uniting leadership with technical acuity.</p>
-
-                <p class="lead animate__animated animate__fadeIn">One significant application of my blended skillset is the online version of our magazine. I've been instrumental in optimizing the front-end experience for our alumni community while simultaneously directing the strategic course of our product development.</p>
-                
-                <p class="lead animate__animated animate__fadeIn">My role seamlessly merges Quality Assurance (QA), DevOps, and product roadmap management. I thrive in balancing design aesthetics and technical functionalities, maintaining a diverse product portfolio in sync with our long-term vision.</p>
-                                
-                <a class="btn btn-custom animate__animated animate__fadeIn mt-3" href="https://stanfordmag.org" role="button">Explore Stanford Magazine</a>
-                </div>
-             </div>
-             <div class="app-images d-flex justify-content-around mt-3 animate__animated animate__fadeIn">
-                    <a href="<%= asset_path 'stan1.png' %>">
-                        <%= image_tag "stan1.png", alt: "Stanford Magazine Image 1", class: "img-fluid", style: "max-width: 500px;" %>
-                    </a>
-                    <a href="<%= asset_path 'stan2.png' %>">
-                        <%= image_tag "stan2.png", alt: "Stanford Magazine Image 2", class: "img-fluid", style: "max-width: 500px;" %>
-                    </a>
-                </div>
-
-    <!-- Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
