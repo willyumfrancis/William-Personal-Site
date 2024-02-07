@@ -42,45 +42,17 @@
 
         <!-- Your existing sections here -->
 
-        <!-- New Image Gallery Section -->
+        <!-- Image Gallery Section -->
         <div class="row justify-content-center mt-4 animate__animated animate__fadeIn">
             <h2 class="text-center w-100">Project Gallery</h2>
-            <!-- Image 1 -->
+            <!-- Images with dynamic path helpers -->
+            <% (1..6).each do |i| %>
             <div class="col-md-6 mb-4">
-                <a href="link-to-project-1">
-                    <img src="path-to-image-1.jpg" class="img-fluid" alt="Project 1">
+                <a href="<%= build_path(build_id: i) %>">
+                    <%= image_tag "build#{i}.jpg", alt: "Project #{i}", class: "img-fluid" %>
                 </a>
             </div>
-            <!-- Image 2 -->
-            <div class="col-md-6 mb-4">
-                <a href="link-to-project-2">
-                    <img src="path-to-image-2.jpg" class="img-fluid" alt="Project 2">
-                </a>
-            </div>
-            <!-- Image 3 -->
-            <div class="col-md-6 mb-4">
-                <a href="link-to-project-3">
-                    <img src="path-to-image-3.jpg" class="img-fluid" alt="Project 3">
-                </a>
-            </div>
-            <!-- Image 4 -->
-            <div class="col-md-6 mb-4">
-                <a href="link-to-project-4">
-                    <img src="path-to-image-4.jpg" class="img-fluid" alt="Project 4">
-                </a>
-            </div>
-            <!-- Image 5 -->
-            <div class="col-md-6 mb-4">
-                <a href="link-to-project-5">
-                    <img src="path-to-image-5.jpg" class="img-fluid" alt="Project 5">
-                </a>
-            </div>
-            <!-- Image 6 -->
-            <div class="col-md-6 mb-4">
-                <a href="link-to-project-6">
-                    <img src="path-to-image-6.jpg" class="img-fluid" alt="Project 6">
-                </a>
-            </div>
+            <% end %>
         </div>
 
         <!-- Continue with your existing HTML structure -->

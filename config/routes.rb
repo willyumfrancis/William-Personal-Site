@@ -12,6 +12,11 @@ Rails.application.routes.draw do
   get 'about', to: 'contact#index', as: 'about'
   get 'contact', to: 'static_pages#namie', as: 'contact'
 
+  get 'builds/:build_id', to: 'builds#show', as: 'build'
+
+
+
+
 
   # config/routes.rb
 post 'transcribe_audio', to: 'transcriptions#create'
