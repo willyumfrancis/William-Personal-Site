@@ -1,89 +1,81 @@
 <head>
-  <style>
-  .navbar-collapse {
-    background-color: #000000;
+<style>
+body { 
+    font-family: Arial, sans-serif; 
 }
 
-.logo-container {
-  height: 70px;
-    background-color: #F8F8F8;
-    padding: 5px; /* Adjusted from 10px to 5px */
-    display: flex;
-    align-items: center;
-    flex-direction: row; /* Adjusted from column to row */
-      margin-left: -10px; /* Added this line */
-
-  }
-  
-  .logo-container .avatar {
-    margin-right: 10px; /* Add a little space between the avatar and the text */
-    transform: scale(0.85); /* Reduce size by 15% */
-
-  }
-
-
-
-
-
-@media (max-width: 768px) {
-
-.slide-in {
-  animation: slide-in 0.5s forwards;
+/* Ensure the right-hand side recipe widget has fixed width */
+.toc-container { 
+    position: fixed; 
+    right: 0; 
+    top: 100px; 
+    width: 200px; /* Adjust the width as needed */
 }
 
-.slide-out {
-  animation: slide-out 0.5s forwards;
+.toc-dropdown { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
 }
 
-@keyframes slide-in {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(0); }
+.toc-dropdown li { 
+    margin-bottom: 10px; 
 }
 
-@keyframes slide-out {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-100%); }
-}
-    .logo-container .logo {
-        width: 25px; /* Adjusted from 35px to 25px */
-        height: 25px; /* Adjusted from 35px to 25px */
-    }
-
-    .logo-container {
-    height: 70px;
-    background-color: #F8F8F8;
-    padding: 5px; /* Adjusted from 10px to 5px */
-    display: flex;
-    align-items: center;
-    flex-direction: row; /* Adjusted from column to row */
-    margin-left: -10px; /* Added this line */
-    margin-top: -8px;
-
-  }
-  
-
-  .navbar-collapse {
-        background-color: #000000;
-    }
-  }
-
-    @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.toc-link { 
+    text-decoration: none; 
+    color: #004085; 
 }
 
-.spin {
-  animation: spin 2s linear;
+/* Content container should not overlap the TOC container */
+.content-container {
+    margin-right: 250px; /* or more, depending on the actual width of the TOC container */
 }
 
-.nav-link:hover i {
-  transform: scale(1.17);
-  transition: transform 0.3s ease-in-out;
+.blog-image { 
+    width: 100%; 
+    height: auto; 
 }
 
+/* Adjusting header sizes */
+h1, h2, h3 {
+    font-size: 1.7rem; /* Adjust the size as needed */
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
 
+/* Spacing for the list items */
+ol, ul {
+    padding-left: 20px; /* This ensures indentation for list items */
+}
 
-  </style>
+/* Spacing for additional images */
+.additional-images {
+    margin-top: 10px; /* This adds space between the main image and additional images */
+}
+
+.additional-images img { 
+    cursor: pointer; 
+    width: 30%; 
+    margin-right: 5%; 
+}
+
+.secondary-image {
+    max-width: 200px;
+    margin-right: 20px;
+    padding: 10px; /* Adds padding around the image */
+    background-color: #fff; /* Optional: Adds a white background around the image */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for depth */
+}
+
+/* Ensure the blog post itself has padding and possibly a max-width to prevent overflow */
+.blog-post {
+    padding-right: 20px; /* Adjust padding to ensure content does not touch the recipe widget */
+    max-width: calc(100% - 220px); /* Example calculation to prevent overflow */
+}
+
+</style>
+
 </head>
 
 <body>
@@ -122,7 +114,7 @@
     <%= link_to "Music", social_path, class:"nav-link" %>
   </li>
   <li class="nav-item <%= 'active' if current_page?(contact_path) %>">
-  <%= link_to "Language", contact_path, class:"nav-link" %>
+  <%= link_to "Healthy Recipes", contact_path, class:"nav-link" %>
 </li>
 
 </ul>

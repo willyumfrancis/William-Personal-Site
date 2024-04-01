@@ -1,44 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>William Francis Misiaszek</title>
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/assets/application.css">
-
-    <!-- Animate.css for animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+
+    /* Content container should not overlap the TOC container */
+.content-container {
+    margin-right: 250px; /* or more, depending on the actual width of the TOC container */
+}
+
+/* Ensure the right-hand side recipe widget has fixed width */
+.toc-container {
+    width: 200px; /* Adjust the width as needed */
+    position: fixed;
+    right: 0;
+    top: 100px;
+}
+
+/* Ensure the blog post itself has padding and possibly a max-width to prevent overflow */
+.blog-post {
+    padding-right: 20px; /* Adjust padding to ensure content does not touch the recipe widget */
+    max-width: calc(100% - 220px); /* Example calculation to prevent overflow */
+}
+
+
+    /* Adjusting header sizes */
+h1, h2, h3 {
+    font-size: 1.7rem; /* Adjust the size as needed */
+    margin-bottom: 0.5rem;
+}
+
+/* Spacing for the list items */
+ol, ul {
+    padding-left: 20px; /* This ensures indentation for list items */
+}
+
+/* Spacing for additional images */
+.additional-images {
+    margin-top: 10px; /* This adds space between the main image and additional images */
+}
+        body { font-family: Arial, sans-serif; }
+        .toc-container { position: fixed; right: 20px; top: 100px; width: 200px; }
+        .toc-dropdown { list-style: none; padding: 0; margin: 0; }
+        .toc-dropdown li { margin-bottom: 10px; }
+        .toc-link { text-decoration: none; color: #004085; }
+        .content-container { margin-right: 250px; }
+        .blog-image { width: 100%; height: auto; }
+        .additional-images img { cursor: pointer; width: 30%; margin-right: 5%; }
+        .secondary-image {
+    max-width: 200px;
+    margin-right: 20px;
+    padding: 10px; /* Adds padding around the image */
+    background-color: #fff; /* Optional: Adds a white background around the image */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for depth */
+}
+    </style>
 </head>
-
 <body>
-    <div class="container mt-2 pb-5"> <!-- Reduced mt value to 2 to move content up and added pb-5 for bottom spacing -->
-    <h1 class="text-center animate__animated animate__fadeInDown" style="color: #004085;">Open New Doors</h1>
+    <div class="container mt-2 pb-5">
+        <h1 class="animate__animated animate__fadeInDown" style="color: #004085;">Food Blog</h1>
 
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-                <p class="lead animate__animated animate__fadeIn"><strong>Embarking on the journey of language learning is akin to unlocking the door to a vast new world of perspectives.</strong></p>
+                <div class="row">
+                <div class="col-lg-8 content-container">
+                    <div id="steak1" class="blog-post">
+                        <h2>Steak Salad</h2>
+                        <!-- Main Image -->
+                        <%= link_to image_tag("food/steak1.jpeg", alt: "Main Steak Salad", class: "img-fluid secondary-image", style: "max-width: 40%;"), asset_path("food/steak1.jpeg"), target: "_blank" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Modal for Viewing Images -->
+        <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">Image View</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="modalImage" src="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+                    <h3>Main:</h3>
+                    <ul>
+                        <li>Steak</li>
+                        <li>Egg</li>
+                        <li>Butter (Olive Oil good too)</li>
+                    </ul>
+                    <h3>Salad:</h3>
+                    <ul>
+                        <li>Mixed Greens (50/50, Arugula good too)</li>
+                        <li>Mini Tomatoes</li>
+                        <li>Mandarins</li>
+                        <li>Greek Yogurt (0% or 2%)</li>
+                        <li>Sweet Potatoes</li>
+                    </ul>
+                    <h3>Spices:</h3>
+                    <ul>
+                        <li>Basil</li>
+                        <li>Oregano</li>
+                        <li>TJ’s Green Goddess</li>
+                        <li>Timut Pepper</li>
+                    </ul>
+                    <ol>
+    <li>Pre-heat oven to 350, insert auto-thermometer set to 117F. Craft salad while steak reaches internal temperature (20 minutes).</li>
+    <li>Prep pan at ultra high temp (8-10) to finish our reverse seared steak. Add butter and turn on pan as steak gets close to 117F. Optionally have 2nd pan for egg started too.</li>
+    <li>For potatoes, stab with fork on the top and bottom 2-3 times, put in bowl, add a splash of water, and put in microwave for 5-6 minutes. Optionally cut and place on salad.</li>
+    <li>Pull Steak out of oven, sear top and bottom for 20-30 seconds (your preference here). Top salad off with Steak and Egg.</li>
+</ol>
+<div class="additional-images">
+                            <%= link_to image_tag("food/steak2.jpeg", alt: "Additional Image 1", class: "img-fluid secondary-image", style: "max-width: 150px; margin-right: 20px;"), asset_path("food/steak2.jpeg"), target: "_blank" %>
+                            <%= link_to image_tag("food/steak3.jpeg", alt: "Additional Image 2", class: "img-fluid secondary-image", style: "max-width: 130px; margin-right: 20px;"), asset_path("food/steak3.jpeg"), target: "_blank" %>
+                        </div>
 
-                <p class="lead animate__animated animate__fadeIn">As a native Spanish speaker who now predominantly uses English in the United States, I have a deep-seated appreciation for the transformative power of languages. My current quest is mastering Japanese—a language that weaves complexity with elegance.</p>
+                </div>
+                <!-- Additional blog posts can be added here -->
+            </div>
 
-                <p class="lead animate__animated animate__fadeIn">For those ready to deepen their linguistic immersion, consider these innovative tactics:</p>
-
-                <ol class="list-group list-group-flush animate__animated animate__fadeIn">
-                    <li class="list-group-item"><strong>1. Technology Integration:</strong> I champion the 'Tech-Swap Challenge,' a practice of setting your electronic devices to the language you're studying. This creates an omnipresent learning environment, subtly reinforcing your daily interactions with the language.</li>
-                    <li class="list-group-item"><strong>2. Digital Immersion:</strong> By using a VPN, you can simulate an internet presence in the country of your target language, allowing you to navigate the web as if you were a local and engage with media in its intended cultural context.</li>
-                    <li class="list-group-item"><strong>3. Cultural Commodities:</strong> To go the extra mile, I suggest using a device that is intrinsic to the culture associated with your target language. Adapting to a different keyboard layout, for example, can offer hands-on insight into the language's nuances and quirks—further bridging the gap between mere language learning and true cultural understanding.</li>
-                </ol>
-                <p class="lead mt-5 animate__animated animate__fadeIn">With a soul that resonates in Spanish and a life that unfolds in English, I now extend my linguistic borders to embrace the subtleties of Japanese. My passion for languages is a journey of endless discovery and delight.</p>
-                <p class="lead mt-3 animate__animated animate__fadeIn">If you're intrigued by the idea of making your Duolingo sessions more dynamic and collaborative, why not join me? Let's connect on <a href="https://www.x.com/@willyumfrancis" target="_blank">@willyumfrancis on X.com</a> and transform our language learning into an engaging, synergistic adventure.</p>
+            <!-- Table of Contents -->
+            <div class="col-lg-4">
+                <div class="toc-container">
+                    <h4>Recipes</h4>
+                    <ul class="toc-dropdown">
+                        <!-- Dynamically filled by JavaScript/jQuery -->
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-</body>
+    
+    <script>
+        $(document).ready(function() {
+            const recipes = [
+                { title: "Steak Salad", date: "2023-04-01", id: "steak1" },
+                { title: "Super Tacos", date: "2023-04-02", id: "tacos1" },
+                // Add your recipes here
+            ];
 
+            recipes.forEach(function(recipe) {
+                $('.toc-dropdown').append(
+                    `<li><a href="#${recipe.id}" class="toc-link">${recipe.title} - ${recipe.date}</a></li>`
+                );
+            });
+        });
+
+        function showImageModal(src) {
+            // Set the src of the modal image to the src of the clicked image
+            $('#modalImage').attr('src', src);
+            // Show the modal
+            $('#imageModal').modal('show');
+        }
+    </script>
+</body>
 </html>
