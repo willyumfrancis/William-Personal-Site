@@ -24,9 +24,13 @@
 
 /* Ensure the blog post itself has padding and possibly a max-width to prevent overflow */
 .blog-post {
-    padding-right: 20px; /* Adjust padding to ensure content does not touch the recipe widget */
+    padding: 20px; /* This adds padding all around the post */
+    margin-bottom: 20px; /* This adds space below each post */
     max-width: calc(100% - 220px); /* Example calculation to prevent overflow */
+    background: #fff; /* Assuming you want a white background */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for depth */
 }
+
 
 
     /* Adjusting header sizes */
@@ -35,9 +39,34 @@ h1, h2, h3 {
     margin-bottom: 0.5rem;
 }
 
-/* Spacing for the list items */
+/* List styles */
 ol, ul {
-    padding-left: 20px; /* This ensures indentation for list items */
+    padding-left: 40px; /* Increase indentation of list */
+    margin-bottom: 10px; /* Space below the list */
+}
+
+li {
+    margin-bottom: 10px; /* Space between list items */
+    line-height: 1.6; /* Improve readability */
+    font-size: 1rem; /* Adjust the font size as needed */
+}
+
+/* Ordered list specific styles */
+ol {
+    counter-reset: item;
+    list-style-type: none;
+}
+
+ol li {
+    counter-increment: item;
+    position: relative;
+}
+
+ol li:before {
+    content: counter(item) ". ";
+    position: absolute;
+    left: -30px; /* Adjust based on actual padding-left of ol */
+    font-weight: bold; /* Make numbers bold */
 }
 
 /* Spacing for additional images */
@@ -65,52 +94,81 @@ ol, ul {
     <div class="container mt-2 pb-5">
         <h1 class="animate__animated animate__fadeInDown" style="color: #004085;">Food Blog</h1>
 
-                <div class="row">
-                <div class="col-lg-8 content-container">
-                    <div id="steak1" class="blog-post">
-                        <h2>Steak Salad</h2>
-                        <!-- Main Image -->
-                        <%= link_to image_tag("food/steak1.jpeg", alt: "Main Steak Salad", class: "img-fluid secondary-image", style: "max-width: 40%;"), asset_path("food/steak1.jpeg"), target: "_blank" %>
-                    </div>
+
+            <div id="steak1" class="blog-post">
+                <h2>Steak Salad</h2>
+                <!-- Main Image -->
+                <%= link_to image_tag("food/steak1.jpeg", alt: "Main Steak Salad", class: "img-fluid", style: "max-width: 20%;"), asset_path("food/steak1.jpeg"), target: "_blank" %>
+                <h3>Main:</h3>
+                <ul>
+                    <li>Steak</li>
+                    <li>Egg</li>
+                    <li>Butter (Olive Oil good too)</li>
+                </ul>
+                <h3>Salad:</h3>
+                <ul>
+                    <li>Mixed Greens (50/50, Arugula good too)</li>
+                    <li>Mini Tomatoes</li>
+                    <li>Mandarins</li>
+                    <li>Greek Yogurt (0% or 2%)</li>
+                    <li>Sweet Potatoes</li>
+                </ul>
+                <h3>Spices:</h3>
+                <ul>
+                    <li>Basil</li>
+                    <li>Oregano</li>
+                    <li>TJ’s Green Goddess</li>
+                    <li>Timut Pepper</li>
+                </ul>
+                <ol>
+                    <li>Pre-heat oven to 350, insert auto-thermometer set to 117F. Craft salad while steak reaches internal temperature (20 minutes).</li>
+                    <li>Prep pan at ultra high temp (8-10) to finish our reverse seared steak. Add butter and turn on pan as steak gets close to 117F. Optionally have 2nd pan for egg started too.</li>
+                    <li>For potatoes, stab with fork on the top and bottom 2-3 times, put in bowl, add a splash of water, and put in microwave for 5-6 minutes. Optionally cut and place on salad.</li>
+                    <li>Pull Steak out of oven, sear top and bottom for 20-30 seconds (your preference here). Top salad off with Steak and Egg.</li>
+                </ol>
+                <div class="additional-images">
+                    <%= link_to image_tag("food/steak2.jpeg", alt: "Additional Image 1", class: "img-fluid secondary-image", style: "max-width: 150px; margin-right: 20px;"), asset_path("food/steak2.jpeg"), target: "_blank" %>
+                    <%= link_to image_tag("food/steak3.jpeg", alt: "Additional Image 2", class: "img-fluid secondary-image", style: "max-width: 130px; margin-right: 20px;"), asset_path("food/steak3.jpeg"), target: "_blank" %>
                 </div>
             </div>
-        </div>
 
-                    <h3>Main:</h3>
-                    <ul>
-                        <li>Steak</li>
-                        <li>Egg</li>
-                        <li>Butter (Olive Oil good too)</li>
-                    </ul>
-                    <h3>Salad:</h3>
-                    <ul>
-                        <li>Mixed Greens (50/50, Arugula good too)</li>
-                        <li>Mini Tomatoes</li>
-                        <li>Mandarins</li>
-                        <li>Greek Yogurt (0% or 2%)</li>
-                        <li>Sweet Potatoes</li>
-                    </ul>
-                    <h3>Spices:</h3>
-                    <ul>
-                        <li>Basil</li>
-                        <li>Oregano</li>
-                        <li>TJ’s Green Goddess</li>
-                        <li>Timut Pepper</li>
-                    </ul>
-                    <ol>
-    <li>Pre-heat oven to 350, insert auto-thermometer set to 117F. Craft salad while steak reaches internal temperature (20 minutes).</li>
-    <li>Prep pan at ultra high temp (8-10) to finish our reverse seared steak. Add butter and turn on pan as steak gets close to 117F. Optionally have 2nd pan for egg started too.</li>
-    <li>For potatoes, stab with fork on the top and bottom 2-3 times, put in bowl, add a splash of water, and put in microwave for 5-6 minutes. Optionally cut and place on salad.</li>
-    <li>Pull Steak out of oven, sear top and bottom for 20-30 seconds (your preference here). Top salad off with Steak and Egg.</li>
+     <div id="tacos1" class="blog-post">
+                        <h2>Super Tacos</h2>
+                        <!-- Main Image -->
+                        <%= link_to image_tag("food/tacos1.jpeg", alt: "Main Tacos", class: "img-fluid", style: "max-width: 40%;"), asset_path("food/tacos1.jpeg"), target: "_blank" %>
+                        <h3>Main:</h3>
+            <ul>
+                <li>Meat (96/4 Beef)</li>
+                <li>Egg</li>
+                <li>Olive Oil</li>
+                <li>Whole Wheat Pita (Sonoran Style/Any Tortilla)</li>
+            </ul>
+            <h3>Fixings:</h3>
+            <ul>
+                <li>Cilantro (50/50, Arugula good too)</li>
+                <li>Mini Tomatoes</li>
+                <li>Mandarins</li>
+                <li>Greek Yogurt (0% or 2%)</li>
+                <li>Mini Avocado</li>
+            </ul>
+            <h3>Spices/Sauces:</h3>
+            <ul>
+                <li>Basil</li>
+                <li>Oregano</li>
+                <li>Fav Hot Sauce (Sabatino Truffle)</li>
+                <li>Timut Pepper</li>
+            </ul>
+            <ol>
+<li>Heat Pan (5-7) with Olive Oil. Add Protein with Spices and close lid to cook slowly while prepping fixings. Turn meat to other side when ready (clean blood release).</li>
+<li>Cut and Prep Fixings into separate bowls: Tomatoes/Mandarins, Avocado, Yogurt, Cilantro/Arugula. </li>
+<li>Put meat in serving dish, set aside to finish tortillas on same pan.</li>
+<li>Defrost tortilla/pita for 60 seconds with tortilla warmer. Finish off on pan with a dab of olive oil, and put back into tortilla holder. Optional to have egg pan on too for eggs.</li>
 </ol>
 <div class="additional-images">
-                            <%= link_to image_tag("food/steak2.jpeg", alt: "Additional Image 1", class: "img-fluid secondary-image", style: "max-width: 150px; margin-right: 20px;"), asset_path("food/steak2.jpeg"), target: "_blank" %>
-                            <%= link_to image_tag("food/steak3.jpeg", alt: "Additional Image 2", class: "img-fluid secondary-image", style: "max-width: 130px; margin-right: 20px;"), asset_path("food/steak3.jpeg"), target: "_blank" %>
-                        </div>
-
+                    <%= link_to image_tag("food/tacos2.jpeg", alt: "Additional Image 1", class: "img-fluid secondary-image", style: "max-width: 150px; margin-right: 20px;"), asset_path("food/tacos2.jpeg"), target: "_blank" %>
                 </div>
-                <!-- Additional blog posts can be added here -->
-            </div>
+
+        </div>          
 
             <!-- Table of Contents -->
             <div class="col-lg-4">
@@ -130,8 +188,8 @@ ol, ul {
     <script>
         $(document).ready(function() {
             const recipes = [
-                { title: "Steak Salad", date: "2023-04-01", id: "steak1" },
-                { title: "Super Tacos", date: "2023-04-02", id: "tacos1" },
+                { title: "Steak Salad", date: "2023-04-02", id: "steak1" },
+                { title: "Super Tacos", date: "2023-04-01", id: "tacos1" },
                 // Add your recipes here
             ];
 
